@@ -90,3 +90,120 @@ get all lis
 document.getElementsByTagName('li');
 document.querySelectorAll('li');
 
+## Creating elements
+
+
+## Reduce, Map, Filter, 
+var totalAmount = orders.reduce(function(sum, order) {
+  return sum += order.amount
+}, 0)
+
+
+## Finding elements within the DOM
+append source to target.
+``` document.getElementById('target').appendChild(document.getElementById('source').lastChild); ```
+
+find a node, then save it as a var. Then use it to locate its parent and delete. 
+``` var star = document.getElementById('fallenstar');
+star.parentNode.removeChild(star); ```
+
+create a new child below parent 'math'
+``` document.getElementById('math').appendChild(document.createTextNode('42')); ```
+
+Create a new image below a span with the ID Sky
+``` 
+  var img = document.createElement('IMG');
+  img.src = 'star_on.gif';
+  document.getElementById('sky').appendChild(img); 
+```
+
+[Javascript CreateElement Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+[my JS Codepen](https://codepen.io/hinchy/pen/GNQVKO?editors=1010)
+
+```
+function createElementForName(name, index) {
+  var element = document.createElement('p');
+  element.id = ("name-" + index);
+  element.textContent = name;
+  return element;
+}
+```
+
+## Creating a JS page 
+
+HTML could look as simple as 
+`<div id='app'></div>`
+
+Then target it with the Javascript
+`app = document.getElementById('app')`
+
+We can have some data - an array of names:
+`var namesOne = ['Louis', 'Sylvia', 'Byron', 'Dylan', 'Pat', 'Ruegen']`
+
+And now we can create an HTML <p> for each name in the array:
+```
+function createElementForName(name, index){ // accepts the name of the element and the index
+  var element = document.createElement('p'); // creates a paragraph and saves to a variable
+  element.id = ("name-" + index); // sets a unique CSS classname for the element.
+  element.textContent = name; // fills the content of the <p> with text - the name that's passed to the method
+  return element; // no implicit returns - return the element. 
+}
+```
+
+Now we just need a way to populate the page. We can do this by running the following (not within a function).
+This calls the createElementForName function for each item in the array.
+```
+  names.forEach(function(name) {
+    var element = createElementForName(name);
+    app.appendChild(element);
+  });
+```
+And now we have a complementary function that will create an element and append it to the page. 
+```
+  function createElementForName(name) {
+    var element = document.createElement('p');
+    element.textContent = name;
+    return element;  
+  };
+```
+
+## Notes
+Adds the class 'highlighted' to an array. 
+element.classList.add('highlighted')
+
+## Chrome Dev Tools
+- $0 shows the item you've got highlighted in inspector
+- $0.childNodes shows all items that are children of the node you've got highlighted
+
+
+## Tuesday - CallBack Functions
+
+Why Callbacks?
+Some operations prohibit other code from running. We want to know when an operation has finished so we can run code in response. 
+
+A callback is a function that will be called when other code has ifnished. 
+
+## Event Handlers
+
+Listening to mouse and key events
+An event occurs and we can set things up to listen. 
+
+```
+var counters = {
+  'button1': 0,
+  'button2': 0
+} // new OBJECT - like a class - called buttons, with 2 values. Like a Hash or Key Value Pair
+
+var button1 = document.getElementById('button1'); // setting button 1 to the HTML ID of button 1
+var button2 = document.getElementById('button2'); // setting button 2 to the HTML ID of button 2
+
+button1.addEventListener('click', function(event) { //adds a listener for a 'click' on the button 1 HTML element
+  var target = event.target; // getting the HTML element that was clicked
+  counters.button1 += 1; // incrementing counters.button1 value
+  target.textContent = counters.button1 // setting button text content to the value of counter.button1
+});
+```
+
+## Listening to events - keyup, keydown, input
+
+[keyup etc. link to codepen ](http://codepen.io/burntcaramel/pen/qqoybv)
