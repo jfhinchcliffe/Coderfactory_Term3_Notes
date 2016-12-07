@@ -207,3 +207,23 @@ button1.addEventListener('click', function(event) { //adds a listener for a 'cli
 ## Listening to events - keyup, keydown, input
 
 [keyup etc. link to codepen ](http://codepen.io/burntcaramel/pen/qqoybv)
+
+## Wednesday  - Javascript Promises NODE
+Promises help deal with asynchronous code. 
+Allows you to wait until something is completed, and it 'promises' to complete once that time comes. 
+
+Promises accept an array of multiple promises. 
+
+## Node
+cd into directory
+npm init
+
+# Javascript Libraries and Polyfills
+Underscore is a utility toolbelt for javascript. 
+Fetch is much nicer than the old XMLHttpRequest 
+
+## Polyfills
+Little scripts detexts browser and version and loads right polyfills.
+polyfills.io can let you load this.
+
+## 
