@@ -15,7 +15,7 @@ Hashes and onkects are often the same type
 var customer = {
   firstName: 'Fred',
   lastName: 'Jones',
-  age: 35, 
+  age: 35,
   starSign: 'Taurus'
 };
 
@@ -48,13 +48,13 @@ No implicit return - need to declare return.
 
 When you see prototype in JS, it's the superclass of the instance you're dealing with.
 
-Map returns an array, forEach lets you do something but returns nothing implitly. 
+Map returns an array, forEach lets you do something but returns nothing implitly.
 
 nvm is Node Version Manager
 nvm use 6.9.1 will use node version 6.9.1
 nvm ls will show all node versions on your computer
 
-Within .filter, we eed a true or false expression for each element within the array. 
+Within .filter, we eed a true or false expression for each element within the array.
 This will determine what appears in the returned array.
 
 use === for a more precise 'is equals'
@@ -65,13 +65,13 @@ functions we can reuse over time
 
 The DOM is a Document Object Model. We can change the elements which make up this page using Javascript
 
-Base elements of the dom 
+Base elements of the dom
 Document - <html> element (actually window.document)
 docment.head <head> element
 document.body - <body> element
 window - global element in the borwser
 
-Finding elements on the page 0 identify them using ides. 
+Finding elements on the page 0 identify them using ides.
 eg <section id='section-1'>
 </section>
 
@@ -93,7 +93,7 @@ document.querySelectorAll('li');
 ## Creating elements
 
 
-## Reduce, Map, Filter, 
+## Reduce, Map, Filter,
 var totalAmount = orders.reduce(function(sum, order) {
   return sum += order.amount
 }, 0)
@@ -103,7 +103,7 @@ var totalAmount = orders.reduce(function(sum, order) {
 append source to target.
 ``` document.getElementById('target').appendChild(document.getElementById('source').lastChild); ```
 
-find a node, then save it as a var. Then use it to locate its parent and delete. 
+find a node, then save it as a var. Then use it to locate its parent and delete.
 ``` var star = document.getElementById('fallenstar');
 star.parentNode.removeChild(star); ```
 
@@ -111,10 +111,10 @@ create a new child below parent 'math'
 ``` document.getElementById('math').appendChild(document.createTextNode('42')); ```
 
 Create a new image below a span with the ID Sky
-``` 
+```
   var img = document.createElement('IMG');
   img.src = 'star_on.gif';
-  document.getElementById('sky').appendChild(img); 
+  document.getElementById('sky').appendChild(img);
 ```
 
 [Javascript CreateElement Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
@@ -129,9 +129,9 @@ function createElementForName(name, index) {
 }
 ```
 
-## Creating a JS page 
+## Creating a JS page
 
-HTML could look as simple as 
+HTML could look as simple as
 `<div id='app'></div>`
 
 Then target it with the Javascript
@@ -146,7 +146,7 @@ function createElementForName(name, index){ // accepts the name of the element a
   var element = document.createElement('p'); // creates a paragraph and saves to a variable
   element.id = ("name-" + index); // sets a unique CSS classname for the element.
   element.textContent = name; // fills the content of the <p> with text - the name that's passed to the method
-  return element; // no implicit returns - return the element. 
+  return element; // no implicit returns - return the element.
 }
 ```
 
@@ -158,7 +158,7 @@ This calls the createElementForName function for each item in the array.
     app.appendChild(element);
   });
 ```
-And now we have a complementary function that will create an element and append it to the page. 
+And now we have a complementary function that will create an element and append it to the page.
 ```
   function createElementForName(name) {
     var element = document.createElement('p');
@@ -168,7 +168,7 @@ And now we have a complementary function that will create an element and append 
 ```
 
 ## Notes
-Adds the class 'highlighted' to an array. 
+Adds the class 'highlighted' to an array.
 element.classList.add('highlighted')
 
 ## Chrome Dev Tools
@@ -179,14 +179,14 @@ element.classList.add('highlighted')
 ## Tuesday - CallBack Functions
 
 Why Callbacks?
-Some operations prohibit other code from running. We want to know when an operation has finished so we can run code in response. 
+Some operations prohibit other code from running. We want to know when an operation has finished so we can run code in response.
 
-A callback is a function that will be called when other code has ifnished. 
+A callback is a function that will be called when other code has ifnished.
 
 ## Event Handlers
 
 Listening to mouse and key events
-An event occurs and we can set things up to listen. 
+An event occurs and we can set things up to listen.
 
 ```
 var counters = {
@@ -209,21 +209,30 @@ button1.addEventListener('click', function(event) { //adds a listener for a 'cli
 [keyup etc. link to codepen ](http://codepen.io/burntcaramel/pen/qqoybv)
 
 ## Wednesday  - Javascript Promises NODE
-Promises help deal with asynchronous code. 
-Allows you to wait until something is completed, and it 'promises' to complete once that time comes. 
+Promises help deal with asynchronous code.
+Allows you to wait until something is completed, and it 'promises' to complete once that time comes.
 
-Promises accept an array of multiple promises. 
+Promises accept an array of multiple promises.
 
 ## Node
 cd into directory
 npm init
 
 # Javascript Libraries and Polyfills
-Underscore is a utility toolbelt for javascript. 
-Fetch is much nicer than the old XMLHttpRequest 
+Underscore is a utility toolbelt for javascript.
+Fetch is much nicer than the old XMLHttpRequest
 
 ## Polyfills
 Little scripts detexts browser and version and loads right polyfills.
 polyfills.io can let you load this.
 
-## 
+## NPM
+Like gems. Packages are a generic term for libraries and apps .
+NPMjs.com has all the Packages
+
+## Babel
+Allows you to run future features in today's browsers.
+put all current JS in a src file
+it creates a lib folder with all transpiled files from the src file. Is compatible with earlier
+
+## Node
