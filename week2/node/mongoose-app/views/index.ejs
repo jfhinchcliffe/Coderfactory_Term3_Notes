@@ -11,7 +11,7 @@
   </form>
   <ul>
   <% ingredients.forEach((ingredient) => { %>
-    <li><a href="show/<%=ingredient.id%>"><%= ingredient.name %>, created <%= ingredient.created_at %></li></a>
+    <li><a href="<%=ingredient.id%>"><%= ingredient.name %> %></li></a>
   <% }) %>
   </ul>
     <h1><%= title %></h1>

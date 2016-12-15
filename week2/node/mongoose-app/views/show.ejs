@@ -3,6 +3,12 @@
 
 <p>
   <a href="/">Index</a> |
-  <a href="/delete/<%= ingredient.id %>" >Delete</a> |
+  <a href="<%= ingredient.id %>" >Delete</a> |
+  
+  <form action="/<%=ingredient.id%>" method="post">
+    <input type="hidden" name="_method" value="DELETE" >
+    <input type="submit" value="Delete" >
+  </form>
+
   <a href="/update/<%= ingredient.id %>" >Update</a>
 </p>  
