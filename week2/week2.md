@@ -103,3 +103,19 @@ express --view=ejs --git node-spotify
 npm install
 
 atom .
+
+express --view=ejs app-name --gitignore
+cd in to directory
+run npm install
+
+npm i mongoose --save
+
+## To Set Up MongoDB
+
+mkdir ~/db/mongodb
+
+## Starting MongoDB locally
+
+mongod --dbpath ~/db/mongodb
+
+## To start mongo DB

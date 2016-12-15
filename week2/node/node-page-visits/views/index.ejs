@@ -7,5 +7,22 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="/signup" method="post">
+
+      <% if (error != null) { %>
+        <p><%= error.message %></p>
+      <% } %>
+
+      <label>
+        First name:
+        <input name="firstName">
+      </label>
+      
+      <label for="lastName">Last name</label>
+      <input name="lastName" id="lastName">  
+      
+      <input type="email name="email" placeholder="email">
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
