@@ -119,3 +119,15 @@ mkdir ~/db/mongodb
 mongod --dbpath ~/db/mongodb
 
 ## To start mongo DB
+
+# Using JWT
+Install npm jsonwebtoken
+npm install jsonwebtoken --save
+npm install
+
+## Go through Passport documentation and install on the weekend on Node.js.
+
+
+# Presentation
+## Tiang
+
