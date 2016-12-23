@@ -181,3 +181,25 @@ export default function Component({ title }) {
 ```
 
 4. Refresh your localhost:3000 and voila - a Jumbotron! You can use this same method to add other bootstrap / html elements.
+
+## Default Props and Types
+PropTypes
+Array, boolean, function number, object, string, 
+
+Default props
+```
+Button.deafultProps = {
+  color:'blue';
+};
+```
+
+## Lifecycle 
+A react component has a bunch of methods that can be used to alter the life of that component.
+
+## Project 
+Hybrid - Node.js API and React front-end
+
+## Day 3
+### A Counter with React
+
+[Patrick's Mern Boilerplate](https://github.com/BurntCaramel/MERN-Boilerplate-Counter)
